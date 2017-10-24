@@ -1,8 +1,6 @@
 import hmac
 import hashlib
 import requests
-import json
-import time
 import sys
 import websocket
 
