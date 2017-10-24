@@ -108,7 +108,6 @@ class Binance():
         if asset:
             balances = self.signed_request('GET', '/api/v3/account')
             for balance in balances['balances']:
-                print balance
                 if balance['asset'] == asset:
                     return balance
         else:
