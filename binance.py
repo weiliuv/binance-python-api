@@ -207,14 +207,14 @@ class Binance():
         """close a websocket connect by listenKey"""
         return self.apikey_request('DELETE', '/api/v1/userDataStream', listenKey = listenKey)
 
-    def withdraw(self, asset, address, amount):
-        """withdraw you asset"""
-        payload = {
-            'asset' : asset,
-            'address': address,
-            'amount': amount
-        }
-        return self.signed_request('POST','/wapi/v1/withdraw.html', **payload)
+    #def withdraw(self, asset, address, amount):
+    #    """withdraw you asset,it's not working yet,maybe later"""
+    #    payload = {
+    #        'asset' : asset,
+    #        'address': address,
+    #        'amount': amount
+    #    }
+    #    return self.signed_request('POST','/wapi/v1/withdraw.html', **payload)
 
     def ws_on_message(self, ws, message):
         print(message)
