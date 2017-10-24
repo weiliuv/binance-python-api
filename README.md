@@ -14,7 +14,7 @@ binance = Binance(api_key='your_api_key', secret_key = 'your_api_secret')
 
 #### Getting all symbol latest price ,or get price by symbol like get_allPrices('ETHBTH')
 ```python
-print pythonon.dumps(binance.get_allPrices(), indent = 2)
+print json.dumps(binance.get_allPrices(), indent = 2)
 ```
 <details>
  <summary>View Response</summary>
@@ -53,7 +53,7 @@ print pythonon.dumps(binance.get_allPrices(), indent = 2)
 
 #### Getting list of current balances, or only one asset like get_balance("ETH"
 ```python
-print pythonon.dumps(binance.get_balance(), indent = 2)
+print json.dumps(binance.get_balance(), indent = 2)
 ```
 <details>
  <summary>View Response</summary>
