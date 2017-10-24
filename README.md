@@ -1,5 +1,5 @@
 # Python Binance API
-This project is designed for [Binance API)(https://www.binance.com/restapipub.html),you can use it as you will.it include http api and websocket.
+This project is designed for [Binance API](https://www.binance.com/restapipub.html).you can use it as you will.it include http api and websocket.
 
 #### Installation
 ```
@@ -852,8 +852,6 @@ market depth for LTCBTC
     ]
   ]
 }
-
-```
 
 ```
 </details>
