@@ -1084,11 +1084,6 @@ ws.run_forever()
 
 #### Get Market Depth via WebSocket
 ```python
-
-```
-
-#### Maintain Market Depth Cache Locally via WebSocket
-```python
 def on_message(ws, message):
     print 'web socket message doing'
     print message
