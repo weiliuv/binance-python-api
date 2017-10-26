@@ -882,11 +882,13 @@ binance.new_order(**payload)
 ```
 
 #### buy or sell by shorcut way
+```python
 binance.buy('MCOETH', 'MARKET', 3)
 binance.buy('MCOETH', 'LIMIT', 3, 0.01)
 
 binance.sell('MCOETH', 'MARKET', 3)
 binance.sell('MCOETH', 'LIMIT', 3, 0.01)
+```
 
 #### Cancel an order
 ```python
