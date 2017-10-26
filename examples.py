@@ -2,12 +2,12 @@ from binance import Binance
 import json
 
 if __name__ == '__main__':
-    api_key = '33F1HzZ94sbhOJaXsCW0fY9fNczVI5X7N70C8swpFgEOOZSrm8CWSxOOtrssKRIj'
-    secret_key = 'CyvCJcAWMin3vkKLmNbpQ64UKF2q4HiztzaZtm1n9CAc37qRqkCV6tfkgm9agbbq'
+    api_key = 'key'
+    secret_key = 'secret'
     binance = Binance(api_key, secret_key)
 
     # print binance.get_allPrices()
-    # print binance.get_balance('ETH')
+    print binance.get_balance('ETH')
     # print json.dumps(binance.get_withdraw_history(asset='ETH'), indent = 2)
     # print json.dumps(binance.get_deposit_history(), indent = 2)
 
