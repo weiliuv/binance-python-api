@@ -183,6 +183,40 @@ class Binance():
         """create new order"""
         return self.signed_request('POST', '/api/v3/order', **payload)
 
+    def buy(self, symbol, mtype, quantity, price = 0.0, timeInForce = 'GTC'):
+        """create buy order"""
+        payload = {
+            'symbol': symbol,
+            'side': "BUY",
+            'type': mtype,
+            'quantity': quantity,
+            'price': price,
+            'timeInForce': timeInForce
+        }
+
+        if mtype == 'MARKET':
+            del payload['price']
+            del payload['timeInForce']
+
+        return self.new_order(**payload)
+
+    def sell(self, symbol, mtype, quantity, price=0.0, timeInForce='GTC'):
+        """create sell order"""
+        payload = {
+            'symbol': symbol,
+            'side': "SELL",
+            'type': mtype,
+            'quantity': quantity,
+            'price': price,
+            'timeInForce': timeInForce
+        }
+
+        if mtype == 'MARKET':
+            del payload['price']
+            del payload['timeInForce']
+
+        return self.new_order(**payload)
+
     def cancel_order(self, symbol, orderId):
         """cancel order by symbol ,orderId is not Mandatory"""
         payload = {

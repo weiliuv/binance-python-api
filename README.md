@@ -875,11 +875,18 @@ binance.new_order(**payload)
 payload = { 
     'symbol': "MCOETH",
     'side': "BUY",
-    'type': "LIMIT",
+    'type': "MARKET",
     'quantity': 10 
 }
 binance.new_order(**payload)
 ```
+
+#### buy or sell by shorcut way
+binance.buy('MCOETH', 'MARKET', 3)
+binance.buy('MCOETH', 'LIMIT', 3, 0.01)
+
+binance.sell('MCOETH', 'MARKET', 3)
+binance.sell('MCOETH', 'LIMIT', 3, 0.01)
 
 #### Cancel an order
 ```python

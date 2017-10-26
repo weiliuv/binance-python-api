@@ -2,8 +2,8 @@ from binance import Binance
 import json
 
 if __name__ == '__main__':
-    api_key = 'your_api_key'
-    secret_key = 'your_api_secret_key'
+    api_key = 'key'
+    secret_key = 'secret'
     binance = Binance(api_key, secret_key)
 
     # print binance.get_allPrices()
@@ -61,3 +61,8 @@ if __name__ == '__main__':
     # binance.keepalive_userdata_stream(listenKey)
     # print listenKey
     # binance.close_userdata_stream(listenKey)
+
+    # binance.buy('MCOETH', 'MARKET', 3)
+    binance.sell('MCOETH', 'LIMIT', 1, 0.1)
+
+
