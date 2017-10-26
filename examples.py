@@ -2,8 +2,8 @@ from binance import Binance
 import json
 
 if __name__ == '__main__':
-    api_key = 'key'
-    secret_key = 'secret'
+    api_key = '33F1HzZ94sbhOJaXsCW0fY9fNczVI5X7N70C8swpFgEOOZSrm8CWSxOOtrssKRIj'
+    secret_key = 'CyvCJcAWMin3vkKLmNbpQ64UKF2q4HiztzaZtm1n9CAc37qRqkCV6tfkgm9agbbq'
     binance = Binance(api_key, secret_key)
 
     # print binance.get_allPrices()
@@ -63,6 +63,8 @@ if __name__ == '__main__':
     # binance.close_userdata_stream(listenKey)
 
     # binance.buy('MCOETH', 'MARKET', 3)
-    binance.sell('MCOETH', 'LIMIT', 1, 0.1)
+    # binance.sell('MCOETH', 'LIMIT', 1, 0.1)
+
+    # print binance.withdraw('ETH', '0xe4D60369264185e880744a4F029DdC5b303C51Ab', 0.1)
 
 
